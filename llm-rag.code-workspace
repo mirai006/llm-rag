@@ -1,0 +1,20 @@
+{
+  "folders": [
+    {
+      "path": ".",
+    },
+  ],
+  "settings": {
+    "terminal.integrated.defaultProfile.windows": "PowerShell pc_setup",
+    "terminal.integrated.profiles.windows": {
+      "PowerShell pc_setup": {
+        "path": "pwsh.exe",
+        "args": [
+          "-NoExit",
+          "-Command",
+          "Set-Location '${workspaceFolder}'; function prompt { $branch = git branch --show-current 2>$null; if ($branch) { $branchColored = \"`e[33m[$branch]`e[0m\"; \"PS $($executionContext.SessionState.Path.CurrentLocation) $branchColored`n> \" } else { \"PS $($executionContext.SessionState.Path.CurrentLocation)> \" } }",
+        ],
+      },
+    },
+  },
+}
