@@ -1,0 +1,6 @@
+cfn-docs/
+cfn-docs-text/
+*.pdf
+*.json
+.venv/
+chroma_db/
